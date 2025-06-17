@@ -327,7 +327,8 @@ def coeficientes_modelo():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 4000))  # Render define PORT no ambiente
     #inserir_dados_com_relacionamentos()
     app.run(host="0.0.0.0", port=port)
+
